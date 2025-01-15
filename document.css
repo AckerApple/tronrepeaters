@@ -39,7 +39,7 @@ input {
 }
 a,
 summary {
-  cursor: pointer;
+  cursor: pointer;color:blue;
 }
 h1,
 h2,
