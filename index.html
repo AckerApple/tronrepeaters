@@ -15,91 +15,9 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>"
     />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #666
-          linear-gradient(
-            to top,
-            #666,
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0)
-          )
-          no-repeat; /* Create a gradient from black to transparent */
-        background-attachment: fixed;
-        line-height: 1.5em;
-      }
-      html {
-        scroll-behavior: smooth;
-        font-size: calc(22px + 0.4vw);
-      }
-      input[type="checkbox"],
-      input[type="radio"] {
-        width: 1em;
-        height: 1em;
-      }
-      select,
-      textarea,
-      button,
-      input {
-        padding: 0.5vw;
-        border-radius: 0.5vw;
-        font-size: 0.9em;
-      }
-      a,
-      summary {
-        cursor: pointer;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin-bottom: 0;
-      }
-
-      .bubble {
-        margin-bottom: 2.5em;
-      }
-
-      .bubble .bubble-head {
-        color: white;
-      }
-
-      .bubble .bubble-body {
-        background-color: white;
-        border-radius: 0.5em;
-        padding: 1.5em;
-        text-align: justify;
-      }
-
-      li {
-        margin-bottom: 0.8em;
-        padding-left: 0;
-        margin-left: 0; /* Remove any default margin */
-        text-indent: 0; /* or a smaller value */
-        list-style-type: none;
-      }
-
-      li::before {
-        content: "• "; /* Add a bullet-like dot */
-        transform: translateY(50%); /* Fine-tune placement */
-      }
-    </style>
+    <link href="document.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-     
-    <noscript style="color: red"
-      >Javascript is required but is turned off on your device</noscript
-    >
     <div style="display: flex; justify-content: center">
       <div style="max-width: 800px; margin: 1em">
         <h1>📡 Tron Repeaters</h1>
@@ -110,16 +28,24 @@
           </p>
         </div>
 
-        <div style="text-align: right">
-          <a href="#make-contact" style="color: white; font-size: smaller"
-            >📧 make contact quick link</a
-          >
+        <br />
+        <h3 style="color: white;">🔗 Links</h3>
+        <hr />
+        <div class="table-contents-wrap">
+          <a href="#thought-process">🧠 <span>Thought Process</span></a>
+          <a href="#its-public-radio">👷🏾‍♀️ <span>It's public radio</span></a>
+          <a href="#communication-help">ℹ️ <span>Communication Help</span></a>
+          <a href="#emergencies">🚨 <span>Emergencies</span></a>
+          <a href="#mygmrs">🌎 <span>MyGMRS</span></a>
+          <a href="#dealing-with-jamming">😵 <span>Dealing with Jamming</span></a>
+          <a href="#make-contact">📧 <span>Make Contact</span></a>
         </div>
-        
+        <hr />
+        <br />
         <br />
 
         <div class="bubble">
-          <h3 class="bubble-head">🧠 Thought Process</h3>
+          <h3 class="bubble-head" id="thought-process">🧠 Thought Process</h3>
           <div class="bubble-body">
             <p>
               The Tron repeaters, amongst other things, are a gateway into radio
@@ -131,7 +57,7 @@
         </div>
 
         <div class="bubble">
-          <h3 class="bubble-head">🧓 👷🏾‍♀️ 🧍 It's public radio</h3>
+          <h3 class="bubble-head" id="its-public-radio">🧓 👷🏾‍♀️ 🧍 It's public radio</h3>
           <div class="bubble-body">
             <li>
               <a
@@ -163,7 +89,7 @@
         </div>
 
         <div class="bubble">
-          <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
+          <h3 class="bubble-head" id="communication-help">ℹ️ Communication Help</h3>
           <div class="bubble-body">
             <li>
               ☝️ Only one person can talk at a time, that's just how it works.
@@ -197,7 +123,7 @@
         </div>
 
         <div class="bubble">
-          <h3 class="bubble-head">🚨 Emergencies</h3>
+          <h3 class="bubble-head" id="emergencies">🚨 Emergencies</h3>
           <div class="bubble-body">
             <li>
               Learn more about transmitting during emergencies, such as "can I
@@ -223,10 +149,10 @@
         </div>
 
         <div class="bubble">
-          <div>
+          <div id="mygmrs">
             <img
               src="https://mygmrs.com/img/logo.0113aa0d.png"
-              alt="🔎 MyGMRS"
+              alt="🌎 MyGMRS"
               width="50%"
               border="0"
             />
@@ -253,7 +179,7 @@
         </div>
 
         <div class="bubble">
-          <h3 class="bubble-head">🙅 ❌ 😵 Dealing with Jamming</h3>
+          <h3 class="bubble-head" id="dealing-with-jamming">🙅 ❌ 😵 Dealing with Jamming</h3>
           <div class="bubble-body">
             <p>
               👂 When you hear odd/weird digital scrambling for long periods of
@@ -307,29 +233,7 @@
         </div>
 
         <div class="bubble">
-          <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
-          <div class="bubble-body">
-            <li>
-              ☝️ Only one person can talk at a time, that's just how it works.
-            </li>
-            <li>
-              👂 When you hear odd/weird digital scrambling, it typically means
-              multiple people are trying to speak.
-            </li>
-            <li>
-              💬 Try saying "comment" to get into a conversation. And wait to be
-              accepted in. Typically, the last person speaking is the person who
-              gives permission for comment to come in.
-            </li>
-            <li>
-              Try to have something to say to get into a conversation, avoid
-              breaking in for a radio check.
-            </li>
-          </div>
-        </div>
-
-        <div class="bubble">
-          <h3 class="bubble-head">💬 A message to radio Eric</h3>
+          <h3 class="bubble-head" id="message-to-repeater-owner">💬 A message to radio Eric</h3>
           <p class="bubble-body">
             You and your contributions are appreciated. I hope your hopes for
             this are making there way on through.
@@ -367,16 +271,15 @@
                       /></g-img>
                     </div>
                   </div>
-                  <div style="text-align: center;">
-                      Bob Marley Jammin
-                  </div>
-                </div></a>
+                  <div style="text-align: center">Bob Marley Jammin</div>
+                </div></a
+              >
             </div>
           </div>
         </div>
 
         <div class="bubble">
-          <h3 class="bubble-head">ℹ️ Extra Info</h3>
+          <h3 class="bubble-head" id="extra-info">ℹ️ Extra Info</h3>
           <p class="bubble-body">
             Website bought and paid for by Acker Apple. Tron repeaters are not
             owned or associated with Acker Apple in any way.
@@ -384,11 +287,12 @@
         </div>
 
         <div class="bubble" style="font-size: 0.7em">
-          Do you develop software and would you like to contribute to this
-          website?
-          <a href="https://github.com/AckerApple/tronrepeaters"
-            >🐱 Github link here</a
-          >
+          <p>
+            Do you develop software and would you like to contribute to this
+            website?
+            <a href="https://github.com/AckerApple/tronrepeaters"
+              >🐱 Github link here</a>
+          </p>
         </div>
       </div>
     </div>

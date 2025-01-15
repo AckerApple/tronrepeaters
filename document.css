@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #666
+    linear-gradient(
+      to top,
+      #666,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    )
+    no-repeat; /* Create a gradient from black to transparent */
+  background-attachment: fixed;
+  line-height: 1.5em;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: calc(22px + 0.4vw);
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1em;
+  height: 1em;
+}
+select,
+textarea,
+button,
+input {
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  font-size: 0.9em;
+}
+a,
+summary {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+}
+
+.bubble {
+  margin-bottom: 2.5em;
+}
+
+.bubble .bubble-head {
+  color: white;
+}
+
+.bubble .bubble-body {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  text-align: justify;
+}
+
+li {
+  margin-bottom: 0.8em;
+  padding-left: 0;
+  margin-left: 0; /* Remove any default margin */
+  text-indent: 0; /* or a smaller value */
+  list-style-type: none;
+}
+
+li::before {
+  content: "• "; /* Add a bullet-like dot */
+  transform: translateY(50%); /* Fine-tune placement */
+}
+
+.table-contents-wrap {
+  font-size: smaller;color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
+
+.table-contents-wrap a {
+  color:white;text-decoration: none;margin:.75em;
+}
+
+.table-contents-wrap span {
+  text-decoration: underline;
+}
