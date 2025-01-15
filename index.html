@@ -1,180 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>App</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
-  <meta name="apple-mobile-web-app-title" content="App" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <!-- emoji as favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>" />
-  <style>
-    * {box-sizing:border-box;}
-    html, body{
-      width:100%;height:100%;padding:0;margin:0;font-family: Arial, Helvetica, sans-serif;
-      background: #666 linear-gradient(to top, #666, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)) no-repeat; /* Create a gradient from black to transparent */
-      background-attachment: fixed;
-      line-height: 1.5em;
-    }
-    html {scroll-behavior:smooth;font-size:calc(22px + .4vw);}
-    input[type="checkbox"], input[type="radio"] {width:1em;height:1em;}
-    select, textarea, button, input {padding:.5vw;border-radius:.5vw;font-size:.9em;}
-    a, summary {cursor: pointer}
-    h1,h2,h3,h4 {margin-bottom:0;}
+  <head>
+    <title>App</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0"
+    />
+    <meta name="apple-mobile-web-app-title" content="App" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- emoji as favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #666
+          linear-gradient(
+            to top,
+            #666,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0)
+          )
+          no-repeat; /* Create a gradient from black to transparent */
+        background-attachment: fixed;
+        line-height: 1.5em;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: calc(22px + 0.4vw);
+      }
+      input[type="checkbox"],
+      input[type="radio"] {
+        width: 1em;
+        height: 1em;
+      }
+      select,
+      textarea,
+      button,
+      input {
+        padding: 0.5vw;
+        border-radius: 0.5vw;
+        font-size: 0.9em;
+      }
+      a,
+      summary {
+        cursor: pointer;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin-bottom: 0;
+      }
 
-    .bubble {
-      margin-bottom: 2.5em;
-    }
-    
-    .bubble .bubble-head {
-      color:white;
-    }
+      .bubble {
+        margin-bottom: 2.5em;
+      }
 
-    .bubble .bubble-body {
-      background-color: white;border-radius: .5em;padding:1.5em;
-      text-align: justify;
-    }
+      .bubble .bubble-head {
+        color: white;
+      }
 
-    li {
-      margin-bottom:.8em;
-      padding-left:0;
-      margin-left: 0;     /* Remove any default margin */
-      text-indent: 0;  /* or a smaller value */
-      list-style-type:none;
-    }
+      .bubble .bubble-body {
+        background-color: white;
+        border-radius: 0.5em;
+        padding: 1.5em;
+        text-align: justify;
+      }
 
-    li::before {
-      content: "• "; /* Add a bullet-like dot */
-      transform: translateY(50%); /* Fine-tune placement */
-    }
-  </style>
-</head>
-<body>
-  <noscript style="color:red">Javascript is required but is turned off on your device</noscript>
-  <div style="display: flex;justify-content: center;">
-    <div style="max-width: 800px;margin:1em;">
-      <h1>📡 Tron Repeaters</h1>
-      <div class="bubble">
-        <p>A place to gather and post information about Tron repeaters in the great 🇺🇸 US of A.</p>
-      </div>
+      li {
+        margin-bottom: 0.8em;
+        padding-left: 0;
+        margin-left: 0; /* Remove any default margin */
+        text-indent: 0; /* or a smaller value */
+        list-style-type: none;
+      }
 
-      <div style="text-align: right;">
-        <a href="#make-contact" style="color:white;font-size: smaller;">📧 make contact quick link</a>
-      </div>
-
-      <div>🚧 Under development...</div>
-      <br />
-
-      <div class="bubble">
-        <h3 class="bubble-head">🧠 Thought Process</h3>  
-        <div class="bubble-body">
-          <p>The Tron repeaters, amongst other things, are a gateway into radio for many folks. This website is aimed to be a gateway-of-knowledge, for those who stumbled onto GMRS radio and are wanting to learn more.</p>
+      li::before {
+        content: "• "; /* Add a bullet-like dot */
+        transform: translateY(50%); /* Fine-tune placement */
+      }
+    </style>
+  </head>
+  <body>
+     
+    <noscript style="color: red"
+      >Javascript is required but is turned off on your device</noscript
+    >
+    <div style="display: flex; justify-content: center">
+      <div style="max-width: 800px; margin: 1em">
+        <h1>📡 Tron Repeaters</h1>
+        <div class="bubble">
+          <p>
+            A place to gather and post information about Tron repeaters in the
+            great 🇺🇸 US of A.
+          </p>
         </div>
-      </div>
 
-      <div class="bubble">
-        <h3 class="bubble-head">🧓 👷🏾‍♀️ 🧍 It's public radio</h3>
-        <div class="bubble-body">
-          <li><a href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/general-mobile-radio-service-gmrs" target="_blank">FCC has its rules</a></li>
-          <li>Many parents have radios. 👶 Kids can be listening.</li>
-          <li>If you hate the 🌎 world, be the start of a better one by not perpetuating the hate (make it end with you!).</li>
-          <li>Do not perpetuate negativity nor attempt to ruin radio. Just because you can doesn't mean you should</li>
-          <li>FCC performs auditing of transmissions.</li>
-          <li>Anyone can file a FCC report. Please avoid doing so. It may ultimately result in repeaters being taken down. However, no one should spread hate and threats and if you feel the need to, <a href="https://consumercomplaints.fcc.gov/hc/en-us/requests/new?ticket_form_id=38844">please report your complaint to the FCC</a></li>
+        <div style="text-align: right">
+          <a href="#make-contact" style="color: white; font-size: smaller"
+            >📧 make contact quick link</a
+          >
         </div>
-      </div>
+        
+        <br />
 
-      <div class="bubble">
-        <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
-        <div class="bubble-body">
-          <li>☝️ Only one person can talk at a time, that's just how it works.</li>
-          <li>👂 When you hear odd/weird digital scrambling, it typically means multiple people are trying to speak.</li>
-          <li>💬 Try saying "comment" to get into a conversation. And wait to be accepted in. Typically, the last person speaking is the person who gives permission for comment to come in.</li>
-          <li>💨 When you are in a back-to-back fast conversation, take a break or mention "taking a break for comments". Taking a break is nice so you can relax back for a bit.</li>
-          <li>🔒 Recommend turning on <strong>Busy Channel Lockout (BCL)</strong>, on your radio, to prevent yourself from talking when someone else is talking. You will be slower to respond but you won't bring down the conversation by accidentally jamming over it.</li>
-          <li>🍗 Try to have something to say to get into a conversation, avoid breaking in for a radio check.</li>
-        </div>
-      </div>
-
-      <div class="bubble">
-        <h3 class="bubble-head">🚨 Emergencies</h3>
-        <div class="bubble-body">
-          <li>Learn more about transmitting during emergencies, such as "can I transmit without a call sign during an emergency?"</li>
-          <li><a href="https://www.fcc.gov/enforcement/areas/unauthorized-operation?utm_source=chatgpt.com" target="_blank">FCC unauthorized operation documentation</a></li>
-          <div style="display: flex;justify-content: center;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/p5SRmCckJkQ" frameborder="0" allowfullscreen></iframe>
+        <div class="bubble">
+          <h3 class="bubble-head">🧠 Thought Process</h3>
+          <div class="bubble-body">
+            <p>
+              The Tron repeaters, amongst other things, are a gateway into radio
+              for many folks. This website is aimed to be a
+              gateway-of-knowledge, for those who stumbled onto GMRS radio and
+              are wanting to learn more.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="bubble">
-        <div><img src="https://mygmrs.com/img/logo.0113aa0d.png" alt="🔎 MyGMRS" width="50%" border="0" /></div>
-        <div class="bubble-body">          
-          <li>The most up to date and best resource for finding repeaters and properly asking for permission to use them.</li>
-          <li>Requires you to have an FCC call sign to perform most activities</li>
-          <li>Much public information here even without a callsign.</li>
-          <li><a href="https://mygmrs.com/">Website link to MyGMRS.com</a></li>
-          <li>🌎 <a href="https://mygmrs.com/map">The map feature is outstanding</a></li>
-        </div>
-      </div>
-
-      <div class="bubble">
-        <h3 class="bubble-head">🙅 ❌ 😵 Dealing with Jamming</h3>
-        <div class="bubble-body">
-          <p>👂 When you hear odd/weird digital scrambling for long periods of time AND often you also hear audio transmissions unrelated to a conversation <strong>THEN</strong>:</p>
-          <li>🤐 Try to minimizing mention of it. Minimize giving attention to a jammer</li>
-          <li>Often a reference to Bob Marley or saying "we jammin" is a way to get the word out softly that someone is 🤡 clowning around and jamming.</li>
-          <li>Not everyone gets jammed part 1. If you are told you are being jammed, hang out on the side for a while and do not talk.</li>
-          <li>Not everyone gets jammed part 2. If you are not being jammed, act like no jamming is occurring and do not give mention to it.</li>
-        </div>
-      </div>
-
-      <div class="bubble">
-        <h3 class="bubble-head" id="make-contact">📧 Make Contact</h3>
-        <div class="bubble-body">
-          Instead of giving your information out over the radio you can use this website as a sort of message dispatch.
-          <br /><br />
-          For now, just mention this website instead of your personal info and the email below can (often) help make connection.
-          <p>👉 Both parties should email <a href="mailto:me@ackerapple.com?subject=Tron Repeaters Make Contact">me@ackerapple.com</a> and mention trying to make contact with other party.</p>
-          <div style="text-align: center;">
-            <a href="mailto:me@ackerapple.com?subject=Tron Repeaters Make Contact">
-              <button type="button">start email</button>
-            </a>
+        <div class="bubble">
+          <h3 class="bubble-head">🧓 👷🏾‍♀️ 🧍 It's public radio</h3>
+          <div class="bubble-body">
+            <li>
+              <a
+                href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/general-mobile-radio-service-gmrs"
+                target="_blank"
+                >FCC has its rules</a
+              >
+            </li>
+            <li>Many parents have radios. 👶 Kids can be listening.</li>
+            <li>
+              If you hate the 🌎 world, be the start of a better one by not
+              perpetuating the hate (make it end with you!).
+            </li>
+            <li>
+              Do not perpetuate negativity nor attempt to ruin radio. Just
+              because you can doesn't mean you should
+            </li>
+            <li>FCC performs auditing of transmissions.</li>
+            <li>
+              Anyone can file a FCC report. Please avoid doing so. It may
+              ultimately result in repeaters being taken down. However, no one
+              should spread hate and threats and if you feel the need to,
+              <a
+                href="https://consumercomplaints.fcc.gov/hc/en-us/requests/new?ticket_form_id=38844"
+                >please report your complaint to the FCC</a
+              >
+            </li>
           </div>
         </div>
-      </div>
 
-      <div class="bubble">
-        <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
-        <div class="bubble-body">
-          <li>☝️ Only one person can talk at a time, that's just how it works.</li>
-          <li>👂 When you hear odd/weird digital scrambling, it typically means multiple people are trying to speak.</li>
-          <li>💬 Try saying "comment" to get into a conversation. And wait to be accepted in. Typically, the last person speaking is the person who gives permission for comment to come in.</li>
-          <li>Try to have something to say to get into a conversation, avoid breaking in for a radio check.</li>
+        <div class="bubble">
+          <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
+          <div class="bubble-body">
+            <li>
+              ☝️ Only one person can talk at a time, that's just how it works.
+            </li>
+            <li>
+              👂 When you hear odd/weird digital scrambling, it typically means
+              multiple people are trying to speak.
+            </li>
+            <li>
+              💬 Try saying "comment" to get into a conversation. And wait to be
+              accepted in. Typically, the last person speaking is the person who
+              gives permission for comment to come in.
+            </li>
+            <li>
+              💨 When you are in a back-to-back fast conversation, take a break
+              or mention "taking a break for comments". Taking a break is nice
+              so you can relax back for a bit.
+            </li>
+            <li>
+              🔒 Recommend turning on
+              <strong>Busy Channel Lockout (BCL)</strong>, on your radio, to
+              prevent yourself from talking when someone else is talking. You
+              will be slower to respond but you won't bring down the
+              conversation by accidentally jamming over it.
+            </li>
+            <li>
+              🍗 Try to have something to say to get into a conversation, avoid
+              breaking in for a radio check.
+            </li>
+          </div>
         </div>
-      </div>
 
-      <div class="bubble">
-        <h3 class="bubble-head">💬 Message to radio Eric</h3>
-        <p class="bubble-body">You and your contributions are appreciated. I hope your hopes for this are making there way on through.</p>
-      </div>
+        <div class="bubble">
+          <h3 class="bubble-head">🚨 Emergencies</h3>
+          <div class="bubble-body">
+            <li>
+              Learn more about transmitting during emergencies, such as "can I
+              transmit without a call sign during an emergency?"
+            </li>
+            <li>
+              <a
+                href="https://www.fcc.gov/enforcement/areas/unauthorized-operation?utm_source=chatgpt.com"
+                target="_blank"
+                >FCC unauthorized operation documentation</a
+              >
+            </li>
+            <div style="display: flex; justify-content: center">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/p5SRmCckJkQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
 
-      <div class="bubble">
-        <p class="bubble-body">💬 Message to the ⛈️ weather man, 🔥 the bob marleys, and the 🔢 key punchers: Make your voice heard.</p>
-      </div>
+        <div class="bubble">
+          <div>
+            <img
+              src="https://mygmrs.com/img/logo.0113aa0d.png"
+              alt="🔎 MyGMRS"
+              width="50%"
+              border="0"
+            />
+          </div>
+          <div class="bubble-body">
+            <li>
+              The most up to date and best resource for finding repeaters and
+              properly asking for permission to use them.
+            </li>
+            <li>
+              Requires you to have an FCC call sign to perform most activities
+            </li>
+            <li>Much public information here even without a callsign.</li>
+            <li>
+              <a href="https://mygmrs.com/">Website link to MyGMRS.com</a>
+            </li>
+            <li>
+              🌎
+              <a href="https://mygmrs.com/map"
+                >The map feature is outstanding</a
+              >
+            </li>
+          </div>
+        </div>
 
-      <div class="bubble">
-        <h3 class="bubble-head">ℹ️ Extra Info</h3>  
-        <p class="bubble-body">Website bought and paid for by Acker Apple. Tron repeaters are not owned or associated with Acker Apple in any way.</p>
-      </div>
+        <div class="bubble">
+          <h3 class="bubble-head">🙅 ❌ 😵 Dealing with Jamming</h3>
+          <div class="bubble-body">
+            <p>
+              👂 When you hear odd/weird digital scrambling for long periods of
+              time AND often you also hear audio transmissions unrelated to a
+              conversation <strong>THEN</strong>:
+            </p>
+            <li>
+              🤐 Try to minimizing mention of it. Minimize giving attention to a
+              jammer
+            </li>
+            <li>
+              Often a reference to Bob Marley or saying "we jammin" is a way to
+              get the word out softly that someone is 🤡 clowning around and
+              jamming.
+            </li>
+            <li>
+              Not everyone gets jammed part 1. If you are told you are being
+              jammed, hang out on the side for a while and do not talk.
+            </li>
+            <li>
+              Not everyone gets jammed part 2. If you are not being jammed, act
+              like no jamming is occurring and do not give mention to it.
+            </li>
+          </div>
+        </div>
 
-      <div class="bubble" style="font-size:0.7em;">
-        Do you develop software and would you like to contribute to this website?
-        <a href="https://github.com/AckerApple/tronrepeaters">🐱 Github link here</a>
+        <div class="bubble">
+          <h3 class="bubble-head" id="make-contact">📧 Make Contact</h3>
+          <div class="bubble-body">
+            Instead of giving your information out over the radio you can use
+            this website as a sort of message dispatch.
+            <br /><br />
+            For now, just mention this website instead of your personal info and
+            the email below can (often) help make connection.
+            <p>
+              👉 Both parties should email
+              <a
+                href="mailto:me@ackerapple.com?subject=Tron Repeaters Make Contact"
+                >me@ackerapple.com</a
+              >
+              and mention trying to make contact with other party.
+            </p>
+            <div style="text-align: center">
+              <a
+                href="mailto:me@ackerapple.com?subject=Tron Repeaters Make Contact"
+              >
+                <button type="button">start email</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
+          <div class="bubble-body">
+            <li>
+              ☝️ Only one person can talk at a time, that's just how it works.
+            </li>
+            <li>
+              👂 When you hear odd/weird digital scrambling, it typically means
+              multiple people are trying to speak.
+            </li>
+            <li>
+              💬 Try saying "comment" to get into a conversation. And wait to be
+              accepted in. Typically, the last person speaking is the person who
+              gives permission for comment to come in.
+            </li>
+            <li>
+              Try to have something to say to get into a conversation, avoid
+              breaking in for a radio check.
+            </li>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <h3 class="bubble-head">💬 A message to radio Eric</h3>
+          <p class="bubble-body">
+            You and your contributions are appreciated. I hope your hopes for
+            this are making there way on through.
+          </p>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-body">
+            💬 A message to the ⛈️ weather man, 🔥 the bob marleys, and the 🔢
+            key punchers
+            <p style="text-align: center">"Make your voice heard"</p>
+            <div style="display: flex; justify-content: center">
+              <a
+                href="https://www.youtube.com/watch?v=oFRbZJXjWIA"
+                data-attrid="VisualDigestVideoResult"
+                data-docid="-Fj6rUEsgCnC8M"
+              >
+                <div>
+                  <div
+                    class="KVSZ5 gZ8Ayf"
+                    data-hovs-fs="1"
+                    style="width: 540px; height: 240px"
+                  >
+                    <div class="Rl5Qrb ZYbY5b">
+                      <g-img>
+                        <img
+                          id="dimg_0SiIZ7b8FMyGwbkPs4akoAo_5"
+                          src="data:image/jpeg;base64,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"
+                          class="YQ4gaf"
+                          height="225"
+                          width="480"
+                          alt=""
+                          data-csiid="0SiIZ7b8FMyGwbkPs4akoAo_1"
+                          data-atf="1"
+                      /></g-img>
+                    </div>
+                  </div>
+                  <div style="text-align: center;">
+                      Bob Marley Jammin
+                  </div>
+                </div></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <h3 class="bubble-head">ℹ️ Extra Info</h3>
+          <p class="bubble-body">
+            Website bought and paid for by Acker Apple. Tron repeaters are not
+            owned or associated with Acker Apple in any way.
+          </p>
+        </div>
+
+        <div class="bubble" style="font-size: 0.7em">
+          Do you develop software and would you like to contribute to this
+          website?
+          <a href="https://github.com/AckerApple/tronrepeaters"
+            >🐱 Github link here</a
+          >
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
-
