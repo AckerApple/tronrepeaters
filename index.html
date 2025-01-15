@@ -8,57 +8,135 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <!-- emoji as favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐠</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>" />
   <style>
     * {box-sizing:border-box;}
     html, body{
       width:100%;height:100%;padding:0;margin:0;font-family: Arial, Helvetica, sans-serif;
       background: #666 linear-gradient(to top, #666, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)) no-repeat; /* Create a gradient from black to transparent */
       background-attachment: fixed;
+      line-height: 1.5em;
     }
     html {scroll-behavior:smooth;font-size:calc(22px + .4vw);}
     input[type="checkbox"], input[type="radio"] {width:1em;height:1em;}
     select, textarea, button, input {padding:.5vw;border-radius:.5vw;font-size:.9em;}
     a, summary {cursor: pointer}
+    h1,h2,h3,h4 {margin-bottom:0;}
 
-    .content-bubble {
-      background-color: white;border-radius: .5em;padding:2em;
+    .bubble {
       margin-bottom: 2em;
+    }
+    
+    .bubble .bubble-head {
+      color:white;
+    }
+
+    .bubble .bubble-body {
+      background-color: white;border-radius: .5em;padding:1.5em;
+      text-align: justify;
+    }
+
+    li {
+      margin-bottom:.8em;
+      padding-left:0;
+      margin-left: 0;     /* Remove any default margin */
+      text-indent: 0;  /* or a smaller value */
+      list-style-type:none;
+    }
+
+    li::before {
+      content: "• "; /* Add a bullet-like dot */
+      transform: translateY(50%); /* Fine-tune placement */
     }
   </style>
 </head>
 <body>
   <noscript style="color:red">Javascript is required but is turned off on your device</noscript>
   <div style="display: flex;justify-content: center;">
-    <div style="max-width: 800px;margin:2em;">
-      <h1> 📡 Tron Repeaters</h1>
-      <div>🚧 Under development...</div>
-      <div class="content-bubble">
+    <div style="max-width: 800px;margin:1em;">
+      <h1>📡 Tron Repeaters</h1>
+      <div class="bubble">
         <p>A place to gather and post information about Tron repeaters in the great 🇺🇸 US of A.</p>
       </div>
-      <div class="content-bubble">
-        <p>🧠 Thought process: The Tron repeaters, amongst other things, are a gateway into radio for many folks. This website is aimed to be a gateway for those who stumbled onto GMRS radio and are wanting to learn more.</p>
+
+      <div>🚧 Under development...</div>
+      <br />
+
+      <div class="bubble">
+        <h3 class="bubble-head">🧠 Thought Process</h3>  
+        <div class="bubble-body">
+          <p>The Tron repeaters, amongst other things, are a gateway into radio for many folks. This website is aimed to be a gateway for those who stumbled onto GMRS radio and are wanting to learn more.</p>
+        </div>
       </div>
-      <div class="content-bubble">
-        <p>ℹ️ More helpful info, such as frequencies and the Boca offset, will be posted here soon.</p>
+      <div class="bubble">
+        <h3 class="bubble-head">🧓 👷🏾‍♀️ 🧍 It's public radio</h3>
+        <div class="bubble-body">
+          <li><a href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/general-mobile-radio-service-gmrs" target="_blank">FCC has its rules</a></li>
+          <li>Many parents have radios. Kids can be listening.</li>
+          <li>If you hate the 🌎 world, be the start of a better tomorrow. Do not perpetuate the things that have pushed you around.</li>
+        </div>
       </div>
-      <div class="content-bubble">
-        <p>Website bought and paid for by Acker Apple. Tron repeaters are not owned or associated with Acker Apple in any way.</p>
+      <div class="bubble">
+        <h3 class="bubble-head">ℹ️ Help for Communicating</h3>
+        <div class="bubble-body">
+          <li>☝️ Only one person can talk at a time, that's just how it works.</li>
+          <li>👂 When you hear odd/weird digital scrambling, it typically means multiple people are trying to speak.</li>
+          <li>💬 Try saying "comment" to get into a conversation. And wait to be accepted in. Typically, the last person speaking is the person who gives permission for comment to come in.</li>
+          <li>Try to have something to say to get into a conversation, avoid breaking in for a radio check.</li>
+        </div>
       </div>
-      <div class="content-bubble">
-        <p>📧 Email <a href="mailto:me@ackerapple.com?subject=TronRepeaters">Acker Apple</a> for more</p>
+      <div class="bubble">
+        <h3 class="bubble-head">🚨 Emergencies</h3>
+        <div class="bubble-body">
+          <li>Learn more about transmitting during emergencies, such as can you tranmit radio without a call sign during an emergency</li>
+          <li><a href="https://www.fcc.gov/enforcement/areas/unauthorized-operation?utm_source=chatgpt.com" target="_blank">FCC unauthorized operation documentation</a></li>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/p5SRmCckJkQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="bubble">
+        <h3 class="bubble-head">🔎 MyGMRS</h3>
+        <div class="bubble-body">
+          <li>The most up to date and best resource for finding repeaters and properly asking for permission to use them.</li>
+          <li>Requires you to have an FCC call sign to perform most activities</li>
+          <li>Much public information here even without a callsign. <a href="https://mygmrs.com/map">The map feature is outstanding</a></li>
+          <li><a href="https://mygmrs.com/">website link to MyGMRS.com</a></li>
+        </div>
+      </div>
+      <div class="bubble">
+        <h3 class="bubble-head">🙅 ❌ 😵 Dealing with Jamming</h3>
+        <div class="bubble-body">
+          <p>👂 When you hear odd/weird digital scrambling for long periods of time AND often you also hear audio transmissions unrelated to a conversation <strong>THEN</strong>:</p>
+          <li>Try to minimizing mention of it. Minimize giving attention to a jammer</li>
+          <li>Often a reference to Bob Marley or saying "we jammin" is a way to get the word out softly that someone is 🤡 clowning around and jamming.</li>
+          <li>Not everyone gets jammed part 1. If you are told you are being jammed, hang out on the side for a while and do not talk.</li>
+          <li>Not everyone gets jammed part 2. If you are not being jammed, act like no jamming is occurring and do not give mention to it.</li>
+        </div>
+      </div>
+      <div class="bubble">
+        <h3 class="bubble-head">📧 Make Contact</h3>  
+        <div class="bubble-body">
+          Instead of giving your information out over the radio you can use this website as a sort of message dispatch.
+          <br /><br />
+          For now, just mention this website instead of your personal info and the email below can (often) help make connection.
+          <p>Email <a href="mailto:me@ackerapple.com?subject=TronRepeaters">Acker Apple</a> for more</p>
+        </div>
+      </div>
+      <br />
+      <div class="bubble">
+        <h3 class="bubble-head">💬 Message to radio Eric</h3>
+        <p class="bubble-body">You and your contributions are appreciated. I hope your hopes for this are making there way on through.</p>
       </div>
       <br /><br />
-      <div class="content-bubble">
-        <p>💬 Message to radio Eric: You and your contributions are appreciated. I hope your hopes for this are making there way on through.</p>
+      <div class="bubble">
+        <p class="bubble-body">💬 Message to the ⛈️ weather man, 🔥 the bob marleys, and the 🔢 key punchers: Make your voice heard.</p>
       </div>
       <br /><br />
-      <div class="content-bubble">
-        <p>💬 Message to the ⛈️ weather man, 🔥 the bob marleys, and the 🔢 key punchers: Make your voice heard.</p>
+      <div class="bubble">
+        <h3 class="bubble-head">ℹ️ Extra Info</h3>  
+        <p class="bubble-body">Website bought and paid for by Acker Apple. Tron repeaters are not owned or associated with Acker Apple in any way.</p>
       </div>
-      <br /><br />
-      <div class="content-bubble">
-        Do you develop software, would you like to contribute to this website?
+      <div class="bubble" style="font-size:0.7em;">
+        Do you develop software and would you like to contribute to this website?
         <a href="https://github.com/AckerApple/tronrepeaters">🐱 Github link here</a>
       </div>
     </div>
