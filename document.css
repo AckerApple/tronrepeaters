@@ -49,7 +49,8 @@ h4 {
 }
 
 .bubble {
-  margin-bottom: 2.5em;
+  padding-top: .2em;
+  margin-bottom: 2.25em;
 }
 
 .bubble .bubble-head {
@@ -90,4 +91,8 @@ li::before {
 
 .table-contents-wrap span {
   text-decoration: underline;
+}
+
+.top-link {
+  font-size: x-small;float:right;text-decoration: none;
 }
