@@ -99,6 +99,10 @@
         <div class="bubble" id="virtual-meetup">
           <h3 class="bubble-head">🗓️ Virtual Meetup</h3>
           <div class="bubble-body">
+            <!--
+              <virtual-meetup></virtual-meetup>
+              <script src="app.js" type="module" charset="utf-8"></script>
+            -->
             <p>In the world of free communication, virtual meetups are the 🔥 campfire where ideas spark, 💬 stories flow, and ⚡️ connections ignite.</p>
             <p>The owner of this website is working with Tron radio friends, to considering hosting a bi-monthly virtual meetup on <a href="https://meet.google.com/">Google Meet</a>.</p>
             <p>We would talk about such things as:</p>
@@ -122,12 +126,18 @@
             <br />
             <br />
             <div style="max-height: 800px;overflow-y: scroll;">
-              <table cellPadding="0" cellSpacing="0" border="0" width="100%">
+              <style>
+                #repeaters-table td {vertical-align: top;}
+                #repeaters-table thead tr, #repeaters-table tr:nth-child(even) {
+                    background-color: #f2f2f2; /* Light grey color */
+                }
+              </style>
+              <table cellPadding="6" cellSpacing="0" border="0" width="100%" id="repeaters-table">
                 <thead style="position: sticky;top: 0;">
                   <tr>
                     <th>Name</th>
                     <th>Alias</th>
-                    <th>Ext</th>
+                    <th>Freq.</th>
                     <th>Range</th>
                   </tr>
                 </thead>
@@ -135,37 +145,40 @@
                   <tr>
                     <td><a href="https://mygmrs.com/repeater/7970">Boca</a></td>
                     <td></td>
-                    <td>.575</td>
+                    <td>
+                      462.575
+                      <div style="line-height: 0.2em;"><small style="font-size:0.6em;color:#666;">offset by 5.075 to 467.650</small></div>
+                    </td>
                     <td>60 miles</td>
                   </tr>
                   <tr>
                     <td><a href="https://mygmrs.com/repeater/7973">Coral Springs</a></td>
                     <td></td>
-                    <td>.725</td>
+                    <td>462.725</td>
                     <td>35 miles</td>
                   </tr>
                   <tr>
                     <td><a href="https://mygmrs.com/repeater/7920">Pompano</a></td>
                     <td>FTL2</td>
-                    <td>.675</td>
+                    <td>462.675</td>
                     <td>25 miles</td>
                   </tr>
                   <tr>
                     <td><a href="https://mygmrs.com/repeater/8574">Fort Lauderdale</a></td>
                     <td>FTL1</td>
-                    <td>.625</td>
+                    <td>462.625</td>
                     <td>30 miles</td>
                   </tr>
                   <tr>
                     <td><a href="https://mygmrs.com/repeater/8987">Naples </a></td>
                     <td></td>
-                    <td>.725</td>
+                    <td>462.725</td>
                     <td>60 miles</td>
                   </tr>
                   <tr>
                     <td><a href="https://mygmrs.com/repeater/8022">Fort Myers</a></td>
                     <td></td>
-                    <td>.600</td>
+                    <td>462.600</td>
                     <td>70 miles</td>
                   </tr>
                 </tbody>

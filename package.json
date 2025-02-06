@@ -1,0 +1,12 @@
+{
+  "name": "tronrepeaters",
+  "version": "1.0.0",
+  "description": "A place to gather and post information about Tron repeaters in the great 🇺🇸 US of A",
+  "main": "app.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m \"simple deploy\" && git push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
